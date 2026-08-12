@@ -1,0 +1,1 @@
+export const XP={PLAN:2,STUDY_MIN:3,CHAPTER:35,SECTION:75,EXAM:200}; export function levelFor(xp){return Math.floor(Math.sqrt(xp/25))+1} export function xpToNext(level){return 25*level*level} export function streakEligible(minutes){return minutes>=30}
