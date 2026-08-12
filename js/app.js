@@ -6,7 +6,7 @@ const buddy=()=>buddies.find(b=>b[0]===S.buddy)||buddies[0];
 async function persist(){await saveState(S)}
 function greet(){const h=new Date().getHours();return h<12?'Good morning':h<18?'Hey': 'Good evening'}
 function actualMinutes(){return Math.floor(S.studySeconds/60)}
-function buddyMsg(){const msgs=[`${greet()}, ${S.userName}! 👀`,S.timer?.running?'WAIT WE'RE ACTUALLY STUDYING??':'okay bestie, we lock in.',actualMinutes()>=30?'okayyyy academic weapon':'one tiny session. we got this.'];return msgs[Math.floor(Math.random()*msgs.length)]}
+function buddyMsg(){const msgs=[`${greet()}, ${S.userName}! 👀`,S.timer?.running?"WAIT WE'RE ACTUALLY STUDYING??":'okay bestie, we lock in.',actualMinutes()>=30?'okayyyy academic weapon':'one tiny session. we got this.'];return msgs[Math.floor(Math.random()*msgs.length)]}
 function render(){const root=document.querySelector('#app');root.innerHTML=`<div class="app"><header class="topbar"><img class="logo" src="assets/logo/mimori-logo.png"><div><div class="brand">mimori</div><div class="small muted">your cozy study companion</div></div><div style="margin-left:auto" class="pill">⭐ ${S.xp} XP · Lv ${levelFor(S.xp)}</div></header><main class="wrap">${page()}</main><nav class="nav">${nav('home','🏠','Home')}${nav('tasks','📋','Tasks')}${nav('subjects','📚','Subjects')}${nav('calendar','📅','Calendar')}${nav('cards','🧠','Cards')}${nav('more','✨','More')}</nav></div>`;bind();}
 function nav(id,ic,t){return `<button class="${S.activeTab===id?'active':''}" data-tab="${id}"><b>${ic}</b>${t}</button>`}
 function page(){switch(S.activeTab){case'tasks':return tasksPage();case'subjects':return subjectsPage();case'calendar':return calendarPage();case'cards':return cardsPage();case'more':return morePage();default:return homePage()}}
