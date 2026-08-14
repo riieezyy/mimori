@@ -1,0 +1,103 @@
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:ui-rounded,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff9fb;color:#403744}button,input,select,textarea{font:inherit}button{border:0;cursor:pointer}.app{min-height:100vh;padding-bottom:82px}.topbar{position:sticky;top:0;z-index:10;background:rgba(255,249,251,.94);backdrop-filter:blur(14px);border-bottom:1px solid #eadce9;padding:12px 16px;display:flex;align-items:center;gap:10px}.logo{width:44px;height:44px;border-radius:14px;object-fit:cover}.brand{font-weight:900;font-size:22px}.muted{color:#8b8190}.wrap{max-width:980px;margin:auto;padding:18px 16px}.hero,.card{background:#fff;border:1px solid #eaddea;border-radius:28px;box-shadow:0 8px 30px rgba(88,58,93,.07)}.hero{padding:20px;background:linear-gradient(135deg,#fff0f6,#f7effc)}h1,h2,h3{margin:0 0 8px}.hero h1{font-size:32px}.grid{display:grid;gap:14px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{padding:17px}.pill{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;background:#f3e9f6;color:#6c4d79;font-weight:700;font-size:13px}.primary{background:#9570b0;color:#fff;padding:12px 17px;border-radius:15px;font-weight:900}.soft{background:#f7eef8;color:#694d74;padding:10px 13px;border-radius:13px;font-weight:800}.danger{background:#ffe8ed;color:#a84663;padding:10px 13px;border-radius:13px;font-weight:800}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.buddy{display:flex;align-items:center;gap:14px}.buddy img{width:92px;height:92px;object-fit:cover;border-radius:22px;background:#f7eef8}.metric{font-size:28px;font-weight:900}.progress{height:10px;border-radius:99px;background:#eee4ef;overflow:hidden}.progress i{display:block;height:100%;background:#a67bbb;border-radius:99px}.nav{position:fixed;bottom:0;left:0;right:0;z-index:20;background:rgba(255,255,255,.97);border-top:1px solid #eaddea;padding:8px 8px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(6,1fr);gap:5px}.nav button{background:none;color:#7d7180;padding:7px 2px;border-radius:14px;font-size:12px}.nav button.active{background:#f5eafa;color:#7a5790;font-weight:900}.nav b{display:block;font-size:19px;margin-bottom:2px}.sectionTitle{margin:20px 0 10px}.list{display:grid;gap:9px}.item{border:1px solid #eee2ef;border-radius:17px;padding:12px;background:#fff}.input{width:100%;padding:11px 12px;border:1px solid #dfd2e2;border-radius:12px;background:#fff}.field{display:grid;gap:6px}.form{display:grid;gap:12px}.modalBack{position:fixed;inset:0;background:rgba(50,37,53,.45);z-index:40;display:grid;place-items:center;padding:16px}.modal{width:min(720px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:26px;padding:20px}.buddyGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.buddyChoice{padding:8px;background:#fff;border:2px solid #eee2ef;border-radius:20px;text-align:left}.buddyChoice.selected{border-color:#a276b9;background:#faf2fc}.buddyChoice img{width:100%;height:135px;object-fit:cover;border-radius:15px}.shop{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.shop .item{text-align:center}.waterBottle{height:230px;width:105px;border:5px solid #9cc7df;border-radius:28px 28px 35px 35px;position:relative;margin:auto;overflow:hidden;background:#edf8ff}.waterBottle:before{content:"";position:absolute;top:-25px;left:26px;width:43px;height:30px;border:5px solid #9cc7df;border-bottom:0;border-radius:10px 10px 0 0}.waterFill{position:absolute;bottom:0;left:0;right:0;background:#a9dcf2;transition:height .3s}.fillText{position:absolute;inset:0;display:grid;place-items:center;font-weight:900;color:#4f7891}.timer{font-size:54px;font-weight:950;text-align:center;letter-spacing:2px}.tabrow{display:flex;gap:7px;overflow:auto;padding-bottom:3px}.tabrow button{white-space:nowrap}.toast{position:fixed;right:15px;bottom:90px;background:#403744;color:#fff;padding:12px 15px;border-radius:15px;z-index:60;box-shadow:0 10px 25px #0002}.empty{padding:25px;text-align:center;color:#928792}.small{font-size:13px}.center{text-align:center}@media(max-width:650px){.two,.three{grid-template-columns:1fr}.hero h1{font-size:27px}.buddyGrid,.shop{grid-template-columns:repeat(2,1fr)}.buddyChoice img{height:110px}.timer{font-size:43px}.nav{grid-template-columns:repeat(6,1fr)}}
+/* ===== MIMORI VISUAL POLISH ===== */
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
+
+body{background:linear-gradient(120deg,#fff9fb,#fdf2f8,#f7effc,#fff9fb);background-size:300% 300%;animation:ambientShift 22s ease-in-out infinite;overflow-x:hidden}
+@keyframes ambientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* floating decorative sparkles, hearts, flowers, clouds - pure CSS, no images needed */
+body::before,body::after,.app::before,.app::after,.hero::after{content:'';position:fixed;pointer-events:none;z-index:0;opacity:.14;filter:blur(.5px);font-size:70px;line-height:1}
+body::before{content:'✦';top:6%;left:5%;animation:floatSlow 13s ease-in-out infinite}
+body::after{content:'☁';top:12%;right:6%;font-size:56px;animation:floatSlow 16s ease-in-out infinite 1s}
+.app::before{content:'♡';bottom:16%;left:4%;font-size:48px;animation:floatSlow 11s ease-in-out infinite .5s}
+.app::after{content:'✿';top:55%;right:5%;font-size:52px;animation:floatSlow 14s ease-in-out infinite 2s}
+.hero::after{content:'🎀';position:absolute;top:-14px;right:18px;font-size:34px;opacity:.55;z-index:1;filter:none;animation:floatSlow 6s ease-in-out infinite}
+@keyframes floatSlow{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(6deg)}}
+
+/* glass depth for cards */
+.hero,.card{background:rgba(255,255,255,.66);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);box-shadow:0 10px 30px rgba(88,58,93,.10),0 2px 8px rgba(88,58,93,.05),inset 0 1px 0 rgba(255,255,255,.6);position:relative;z-index:1}
+.hero{background:linear-gradient(135deg,rgba(255,240,246,.78),rgba(247,239,252,.78))}
+.item{background:rgba(255,255,255,.8);backdrop-filter:blur(10px);position:relative;z-index:1}
+.modal{background:rgba(255,255,255,.88);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%)}
+.topbar{position:relative;z-index:10}
+
+/* card/item entrance */
+.card,.hero,.item{animation:cardIn .5s cubic-bezier(.16,1,.3,1) both}
+.list>.item:nth-child(1),.grid>*:nth-child(1),.shop>.item:nth-child(1){animation-delay:.02s}
+.list>.item:nth-child(2),.grid>*:nth-child(2),.shop>.item:nth-child(2){animation-delay:.06s}
+.list>.item:nth-child(3),.grid>*:nth-child(3),.shop>.item:nth-child(3){animation-delay:.10s}
+.list>.item:nth-child(4),.shop>.item:nth-child(4){animation-delay:.14s}
+.list>.item:nth-child(5),.shop>.item:nth-child(5){animation-delay:.18s}
+.list>.item:nth-child(6),.shop>.item:nth-child(6){animation-delay:.22s}
+@keyframes cardIn{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+
+/* buttons: lift + shimmer */
+.primary,.soft,.danger{transition:transform .18s cubic-bezier(.34,1.56,.64,1),box-shadow .18s,filter .18s;position:relative;overflow:hidden}
+.primary::after,.soft::after,.danger::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);background-size:220% 100%;background-position:220% 0;pointer-events:none}
+.primary:active::after,.soft:active::after,.danger:active::after{animation:shimmerSweep .5s ease}
+@keyframes shimmerSweep{from{background-position:220% 0}to{background-position:-60% 0}}
+.primary:hover,.soft:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(88,58,93,.16)}
+.primary:active,.soft:active,.danger:active{transform:translateY(1px) scale(.97)}
+
+/* LOCK-IN pulse */
+[data-act="lock"]{animation:lockPulse 2.4s ease-in-out infinite}
+@keyframes lockPulse{0%,100%{box-shadow:0 0 0 0 rgba(149,112,176,.5)}50%{box-shadow:0 0 0 13px rgba(149,112,176,0)}}
+
+/* progress bar shine */
+.progress{position:relative;overflow:hidden}
+.progress i{position:relative;overflow:hidden}
+.progress i::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.65),transparent);background-size:200% 100%;animation:shine 2.6s linear infinite}
+@keyframes shine{from{background-position:200% 0}to{background-position:-60% 0}}
+
+/* buddy float */
+.buddy img,img[src*="assets/buddies/"]{animation:floatY 4.5s ease-in-out infinite;filter:drop-shadow(0 6px 10px rgba(88,58,93,.18))}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+/* tactile items (tasks, subjects, flashcards, shop) */
+.item{transition:transform .18s cubic-bezier(.34,1.56,.64,1),box-shadow .18s}
+.item:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(88,58,93,.12)}
+.item:active{transform:scale(.97)}
+
+/* date input polish */
+.input{transition:box-shadow .2s,border-color .2s}
+.input:focus{box-shadow:0 0 0 3px rgba(149,112,176,.22);border-color:#9570b0;outline:none}
+.input[type="date"]::-webkit-calendar-picker-indicator{cursor:pointer;opacity:.65;transition:transform .2s}
+.input[type="date"]:hover::-webkit-calendar-picker-indicator{transform:scale(1.15)}
+
+/* modal pop-in */
+.modalBack{animation:fadeIn .25s ease;backdrop-filter:blur(6px)}
+.modal{animation:modalPop .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes modalPop{from{opacity:0;transform:scale(.92) translateY(10px)}to{opacity:1;transform:none}}
+
+/* toast (XP etc) feels more satisfying */
+.toast{animation:toastIn .4s cubic-bezier(.34,1.56,.64,1) both,toastOut .35s ease 2200ms forwards;background:linear-gradient(135deg,#9570b0,#7a5790);box-shadow:0 12px 30px rgba(88,58,93,.35),inset 0 1px 0 rgba(255,255,255,.15)}
+@keyframes toastIn{from{opacity:0;transform:translateY(14px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes toastOut{to{opacity:0;transform:translateY(8px) scale(.96)}}
+
+/* nav movement */
+.nav button{transition:transform .2s,color .2s,background .2s}
+.nav button.active{transform:translateY(-3px)}
+.nav button:active{transform:scale(.92)}
+.nav b{transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.nav button.active b{transform:scale(1.15) translateY(-2px)}
+
+/* water bottle: float, smooth rise, wave, shimmer */
+.waterBottle{animation:bottleFloat 5s ease-in-out infinite;box-shadow:0 14px 26px rgba(88,58,93,.12)}
+@keyframes bottleFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-6px) rotate(-1deg)}}
+.waterFill{transition:height .7s cubic-bezier(.34,1.2,.4,1);background:linear-gradient(180deg,#bfe6f7,#93cdea)}
+.waterFill::before{content:'';position:absolute;top:-6px;left:-25%;width:150%;height:14px;background:radial-gradient(circle at 10px 6px,rgba(255,255,255,.55) 6px,transparent 7px) repeat-x;background-size:24px 14px;animation:waveMove 2.2s linear infinite;opacity:.8}
+.waterFill::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);background-size:200% 100%;animation:shine 3.4s linear infinite}
+@keyframes waveMove{from{transform:translateX(0)}to{transform:translateX(-24px)}}
+
+/* customize/shop polish */
+.shop .item{transition:transform .2s,box-shadow .2s}
+.shop .item:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 26px rgba(88,58,93,.15)}
+.buddyChoice{transition:transform .2s,box-shadow .2s,border-color .2s}
+.buddyChoice:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(88,58,93,.12)}
+.buddyChoice.selected{animation:selectedPop .4s cubic-bezier(.34,1.56,.64,1)}
+@keyframes selectedPop{0%{transform:scale(.95)}60%{transform:scale(1.03)}100%{transform:scale(1)}}
+
+/* small depth touches */
+.pill{box-shadow:0 2px 6px rgba(108,77,121,.12)}
+.timer{text-shadow:0 4px 14px rgba(88,58,93,.18)}
